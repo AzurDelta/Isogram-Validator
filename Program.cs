@@ -1,9 +1,11 @@
-﻿start:
-Console.WriteLine("enter string to validate");
-string stringToValidate = Console.ReadLine();
-
-if (stringToValidate == null)
-    goto start;
+﻿string stringToValidate;
+while (true)
+{ 
+    Console.WriteLine("enter string to validate");
+    stringToValidate = Console.ReadLine();
+    if (stringToValidate != null)
+    break;
+}
 
 if (stringToValidate.Length == stringToValidate.Distinct().Count())
     Console.WriteLine("string is isogram");
